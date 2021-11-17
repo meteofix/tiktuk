@@ -9,7 +9,7 @@ const AuthorAvatar = ({authorLink, avatar, setIsHover}) => {
                       onMouseEnter={() => setIsHover(true)}
                       onMouseLeave={() => setIsHover(false)}
                 >
-                    <img alt='' src={avatar}/>
+                    <img alt='Profile image' title='Profile image' src={avatar}/>
                 </span>
         </Link>
     );

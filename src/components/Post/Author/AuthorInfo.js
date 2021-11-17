@@ -9,18 +9,9 @@ const AuthorInfo = ({authorLink, isHover, setIsHover, authorMeta}) => {
             <Link to={authorLink}
                   onMouseEnter={() => setIsHover(true)}
                   onMouseLeave={() => setIsHover(false)}>
-                <h3 className={
-                    isHover ?
-                        `${classes.authorId} ${classes.underline}`
-                        :
-                        classes.authorId
-                }
-                >
+                <h3 className={isHover ? `${classes.authorId} ${classes.underline}` : classes.authorId}>
                     {authorMeta.name}
-                    {authorMeta.verified ?
-                        <UserVerifiedIcon cl={classes.verified}/>
-                        : ''
-                    }
+                    {authorMeta.verified ? <UserVerifiedIcon cl={classes.verified}/> : ''}
                 </h3>
             </Link>
             <Link to={authorLink}
