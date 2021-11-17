@@ -1,0 +1,50 @@
+.userHeader {
+    flex: 0 0 auto;
+    position: relative;
+    margin-bottom: 20px;
+    width: 594px;
+    box-sizing: border-box;
+    padding-right: 52px;
+}
+.userHeader .userInfo {
+    display: flex;
+    flex-direction: row;
+    -webkit-box-align: center;
+    align-items: center;
+}
+.countInfos{
+    display: flex;
+    -webkit-box-align: center;
+    align-items: center;
+    margin-top: 22px;
+    color: rgba(18, 18, 18, 0.75);
+}
+.userDesc {
+    margin-top: 10px;
+    font-weight: 400;
+    color: #121212;
+    white-space: pre-line;
+}
+.userLink {
+    font-weight: 700;
+    margin-top: 5px;
+}
+.userLink a{
+    font-style: normal;
+    font-weight: 600;
+    line-height: 18px;
+    height: 22px;
+    max-width: 236px;
+    display: inline-block;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    color: #161823;
+    background-repeat: no-repeat;
+    padding-left: 20px;
+    background-position: center left;
+    background-image: url(../../UI/icons/linkIcon.svg);
+}
+.userLink a:hover {
+    text-decoration: underline;
+}

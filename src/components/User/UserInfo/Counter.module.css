@@ -1,0 +1,16 @@
+.number {
+    font-weight: 700;
+    font-size: 18px;
+    line-height: 25px;
+    display: flex;
+    -webkit-box-align: baseline;
+    align-items: baseline;
+    direction: ltr;
+}
+.number:not(:last-child) {
+    margin-right: 20px;
+}
+.unit {
+    font-weight: 400;
+    margin-left: 6px;
+}

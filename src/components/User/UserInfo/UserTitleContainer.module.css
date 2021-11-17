@@ -1,0 +1,61 @@
+.userTitleContainer {
+    margin-left: 20px;
+    flex: 1 1 0%;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+.userTitle {
+    font-weight: 700;
+    font-size: 32px;
+    line-height: 38px;
+    padding-bottom: 4px;
+}
+.verified {
+    width: 20px;
+    height: 20px;
+    margin-left: 8px;
+}
+.userSubTitle {
+    font-weight: 600;
+    font-size: 18px;
+    line-height: 25px;
+    text-overflow: ellipsis;
+    height: 25px;
+    overflow: hidden;
+    max-width: 450px;
+    white-space: nowrap;
+}
+.userFollowContainer {
+    font-weight: 700;
+    position: relative;
+    width: 208px;
+    height: 36px;
+    padding: 0px;
+    margin: 16px 0px 0px;
+    font-size: 18px;
+    line-height: 25px;
+}
+.followButton {
+    position: absolute;
+    left: 0px;
+    top: 0px;
+    min-width: 208px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: flex;
+    -webkit-box-align: center;
+    align-items: center;
+    -webkit-box-pack: center;
+    justify-content: center;
+    padding: 1px 6px;
+    height: 36px;
+    background-color: #fe2c55;
+    color: #fff;
+    border: none;
+}
+.followButton:hover {
+    background: rgba(254,44,85,0.06);
+    cursor: pointer;
+    background: linear-gradient(0deg ,rgba(0,0,0,0.06),rgba(0,0,0,0.06)),#fe2c55;
+    border: none;
+}
