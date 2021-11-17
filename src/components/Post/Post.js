@@ -20,7 +20,7 @@ const Post = ({post, id}) => {
             }
             <div className={isMobile? classes.postContent + ' ' + classes.postContentMobile : classes.postContent}>
                 {/*{isDesktopOrTablet &&*/}
-                <div className={isMobile && classes.mobile}>
+                <div className={isMobile? classes.mobile : ''}>
                     <AuthorInfo authorMeta={post.authorMeta} authorLink={authorLink} isHover={isHover}
                                 setIsHover={setIsHover}/>
                     <VideoMeta text={post.text}/>
