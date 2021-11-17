@@ -1,0 +1,38 @@
+.videoFeedItem {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    float: left;
+    width: 196px;
+    height: 260px;
+    margin-right: 2px;
+    margin-bottom: 2px;
+}
+.videoPlayer {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+.videoCardMask {
+    position: absolute;
+    width: 100%;
+    bottom: 0px;
+    height: 100px;
+    background: linear-gradient(rgba(22, 24, 35, 0) 2.92%, rgba(22, 24, 35, 0.5) 98.99%);
+    padding: 67px 13px 17px;
+    box-sizing: border-box;
+}
+.videoCardMask img {
+    transform: translate(0px, 6px);
+}
+.videoCount {
+    font-weight: 600;
+    vertical-align: middle;
+    color: rgb(255, 255, 255);
+    padding-left: 4px;
+}
+.buffered {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+}
