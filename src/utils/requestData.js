@@ -11,8 +11,14 @@ const requestData = ({url='', name = '' , responseData='', setResponseData, setI
         }).then(function (response) {
             setResponseData(response.data);
             setIsLoading(false);
-        }).catch(function (error){
-            console.log(error);
+        }).catch(function (err){
+            if (err.response) {
+                console.log('Client received an error response (5xx, 4xx)')
+            } else if (err.request) {
+                console.log('Client never received a response, or request never left ')
+            } else {
+                console.log('Something wrong')
+            }
         })
     return responseData;
 };

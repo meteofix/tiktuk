@@ -12,6 +12,7 @@ import Item from "../../../UI/buttons/CounterBar/Item";
 import Loader from "../../../UI/icons/Loader/Loader";
 import {MediaContext} from "../../../store/contexts/MediaContext";
 import AuthorAvatar from "../Author/AuthorAvatar";
+import tiktok from "../../../UI/icons/tiktok.png";
 
 const VideoContainer = ({post, id}) => {
     const {isDesktopOrTablet, isMobile} = useContext(MediaContext);
@@ -52,9 +53,12 @@ const VideoContainer = ({post, id}) => {
             >
                 <div className={classes.video} onClick={handlePlayPause}>
                     {noImage?
-                        <div className={l.loaderWrapper}>
-                            <Loader small/>
-                        </div>
+                        // <div className={l.loaderWrapper}>
+                        //     <Loader small/>
+                        // </div>
+                        <img className={classes.videoPlayer}
+                             src={tiktok}
+                        />
                         :
                         noVideo?
                             <img alt={'cover'} className={classes.videoPlayer}

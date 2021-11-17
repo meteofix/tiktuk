@@ -3,8 +3,12 @@
     align-items: center;
     justify-content: center;
     z-index: 20;
-    width: 100vw;
+    /*width: 100vw;*/
+    width: 100%;
     height: 100%;
+}
+.loaderWrapperMobile {
+    width: 100vw;
 }
 .loaderHeight60 {
     height: 60vh;

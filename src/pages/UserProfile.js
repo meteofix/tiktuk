@@ -55,13 +55,17 @@ const UserProfile = () => {
                     </div>
                     :
                     !userInfo || userInfo.length === 0 || !userInfo.user.uniqueId ?
-                        <p>Error</p>
+                        <div className={l.loaderWrapper + ' ' + l.loaderHeight80}>
+                            <Loader/>
+                        </div>
                         :
                         <UserHeader userInfo={userInfo}/>
                 }
                 {isInfoLoading? '' :
                     !userInfo || userInfo.length === 0 || !userInfo.user.uniqueId ?
-                        <p>Error</p>
+                        <div className={l.loaderWrapper + ' ' + l.loaderHeight80}>
+                            <Loader/>
+                        </div>
                         :
                         <UserMain user={user}/>
                 }

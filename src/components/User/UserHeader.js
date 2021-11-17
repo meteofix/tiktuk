@@ -22,9 +22,12 @@ const UserHeader = ({userInfo}) => {
                 >
                     <LeftNav/>
                 </div>
+                {isMobile &&
                 <div className={classes.userHeadCenter}>
                     <p> {userInfo.user.nickname} | {userInfo.user.uniqueId} </p>
                 </div>
+                }
+
             </div>
             <div className={isMobile? classes.userInfo + ' ' + classes.userInfoMobile : classes.userInfo}>
                 <Avatar

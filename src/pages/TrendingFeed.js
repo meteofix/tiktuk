@@ -26,7 +26,11 @@ const TrendingFeed = () => {
         <PlayerProvider>
             <div className={isMobile? classes.feedWrapper + ' ' + classes.feedWrapperMobile : classes.feedWrapper}>
             {isLoading?
-                <div className={l.loaderWrapper + ' ' + l.loaderHeight80}>
+                <div className={isMobile?
+                    l.loaderWrapper + ' ' + l.loaderHeight80 + ' ' + l.loaderWrapperMobile
+                    :
+                    l.loaderWrapper + ' ' + l.loaderHeight80}
+                >
                     <Loader/>
                 </div>
                 :
