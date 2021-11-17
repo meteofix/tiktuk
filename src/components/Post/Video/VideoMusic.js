@@ -7,7 +7,7 @@ const VideoMusic = ({musicMeta}) => {
     const {isDesktopOrTablet, isMobile} = useContext(MediaContext);
 
     return (
-        <div className={isMobile? classes.musicInfo + ' ' + classes.musicInfoMobile : classes.musicText}>
+        <div className={isMobile? classes.musicInfo + ' ' + classes.musicInfoMobile : classes.musicInfo}>
             <MusicIcon/>
             <div className={classes.play}>
                 <h4>

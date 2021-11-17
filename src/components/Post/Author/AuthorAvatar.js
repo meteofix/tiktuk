@@ -16,11 +16,12 @@ const AuthorAvatar = ({authorLink, avatar, setIsHover = () => false}) => {
                       onMouseLeave={() => setIsHover(false)}
                 >
                     {isMobile &&
-                    <img alt='Profile image' title='Profile image' src={avatar}/>
-                    }
                     <div className={classes.plusIcon}>
                         <img alt={'Follow'} src={followPlus}/>
                     </div>
+                    }
+                    <img alt='Profile image' title='Profile image' src={avatar}/>
+
                 </span>
         </Link>
     );

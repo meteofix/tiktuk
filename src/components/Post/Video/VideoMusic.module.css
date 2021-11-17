@@ -3,9 +3,9 @@
     margin-top: 8px;
     margin-bottom: 12px;
     max-width: 524px;
+    display: flex;
 }
 .musicInfoMobile {
-    display: flex;
 }
 
 .musicInfoText:hover {

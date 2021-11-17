@@ -11,13 +11,10 @@ import VolumeButton from "../../../UI/buttons/VolumeButton";
 import Item from "../../../UI/buttons/CounterBar/Item";
 import Loader from "../../../UI/icons/Loader/Loader";
 import {MediaContext} from "../../../store/contexts/MediaContext";
-import FollowButton from "../../../UI/buttons/FollowButton";
 import AuthorAvatar from "../Author/AuthorAvatar";
-
 
 const VideoContainer = ({post, id}) => {
     const {isDesktopOrTablet, isMobile} = useContext(MediaContext);
-
     const [isVisible, currentElement] = useVisibility(200);
     const [isVideoHover, setIsVideoHover] = useState(!!isMobile);
     const [noVideo, setNoVideo] = useState(false);
@@ -25,7 +22,6 @@ const VideoContainer = ({post, id}) => {
     const [isBuffered, setIsBuffered] = useState(false);
     const {isMuted, playingId, dispatch} = useContext(PlayerContext)
     const authorLink = '@' + post.authorMeta.name;
-
 
     const handlePlayPause = () => {
         if (playingId===id) dispatch(setPlayingId(''));
