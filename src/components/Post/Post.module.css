@@ -1,0 +1,15 @@
+.postWrapper {
+    position: relative;
+    max-width: 692px;
+    padding: 20px 0;
+    border-bottom: 0.5px solid rgba(22, 24, 35, 0.12);
+}
+.postContent {
+    position: relative;
+    margin-left: 68px;
+}
+.followWrapper {
+    position: absolute;
+    right: 0px;
+    top: 8px;
+}
