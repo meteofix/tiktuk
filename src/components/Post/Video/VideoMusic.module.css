@@ -1,0 +1,18 @@
+.musicInfo {
+    margin-top: 4px;
+    margin-bottom: 12px;
+    max-width: 524px;
+}
+.musicInfoText:hover {
+    text-decoration: underline;cursor: pointer;
+}
+.musicInfoText {
+    font-weight: 600;
+    display: inline-block;
+    font-size: 16px;
+    line-height: 22px;
+    width: 100%;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    overflow: hidden;
+}

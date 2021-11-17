@@ -1,0 +1,79 @@
+:root {
+    --animation-duration: 0.8s;
+    --circle-diameter-small: 20px;
+    --circle-diameter: 50px;
+    --circle-scale-percent: 0.2;
+}
+.loader {
+    position: relative;
+    left: calc(var(--circle-diameter) * -1);
+}
+
+.loaderSmall {
+    left: calc(var(--circle-diameter-small) * -1);
+}
+
+.loader:before,
+.loader:after {
+    content: " ";
+    display: table-cell;
+    width: var(--circle-diameter);
+    height: var(--circle-diameter);
+    border-radius: 50%;
+    position: absolute;
+    animation-duration: var(--animation-duration);
+    animation-name: revolve;
+    animation-iteration-count: infinite;
+    animation-timing-function: ease-in-out;
+    mix-blend-mode: darken;
+}
+.loaderSmall:before,
+.loaderSmall:after {
+    width: var(--circle-diameter-small);
+    height: var(--circle-diameter-small);
+    animation-name: revolveSmall;
+
+}
+.loader:before {
+    background: rgb(77, 232, 244);
+}
+
+.loader:after {
+    background: rgb(253, 62, 62);
+    animation-delay: calc(var(--animation-duration) / -2);
+}
+
+@keyframes revolve {
+    0% {
+        left: 0;
+    }
+    25% {
+        transform: scale(calc(1 + var(--circle-scale-percent)));
+    }
+    50% {
+        left: var(--circle-diameter);
+    }
+    75% {
+        transform: scale(calc(1 - var(--circle-scale-percent)));
+    }
+    100% {
+        left: 0;
+    }
+}
+@keyframes revolveSmall {
+    0% {
+        left: 0;
+    }
+    25% {
+        transform: scale(calc(1 + var(--circle-scale-percent)));
+    }
+    50% {
+        left: var(--circle-diameter-small);
+    }
+    75% {
+        transform: scale(calc(1 - var(--circle-scale-percent)));
+    }
+    100% {
+        left: 0;
+    }
+}

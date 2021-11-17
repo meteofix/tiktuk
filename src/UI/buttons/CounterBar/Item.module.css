@@ -1,0 +1,35 @@
+.barItemWrapper {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    -webkit-box-align: center;
+    align-items: center;
+    width: 48px;
+    font-size: 13px;
+}
+.barItemImg {
+    margin-top: 8px;
+    background-color: rgba(22, 24, 35, 0.06);
+    padding: 12px;
+    border-radius: 100%;
+    margin-left: 0px;
+    cursor: pointer;
+    transition: all 200ms ease-in-out 0s;
+    width: 24px;
+    height: 24px;
+    background-size: 24px;
+    background-position: center center;
+}
+.barItemImg:hover {
+    background: rgba(22, 24, 35, 0.1);
+}
+.barItemText {
+    display: inline-block;
+    text-align: center;
+    margin-top: 6px;
+    color: rgba(22, 24, 35, 0.75);
+    font-family: proxima-semibold, PingFangSC, sans-serif;
+    font-weight: 600;
+    font-size: 13px;
+    line-height: 17px;
+}

@@ -1,0 +1,7 @@
+.tag {
+    font-weight: 600;
+    cursor: pointer;
+}
+.tag:hover {
+    text-decoration: underline;
+}
