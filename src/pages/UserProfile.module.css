@@ -1,0 +1,14 @@
+.userLayout {
+    margin: auto;
+    display: flex;
+    flex-direction: row;
+    padding: 80px 20px 36px 80px;
+    width: 692px;
+    max-width: 692px;
+}
+.userLayoutContent {
+    display: flex;
+    flex: 1 1 auto;
+    flex-direction: column;
+    padding-right: 48px;
+}
