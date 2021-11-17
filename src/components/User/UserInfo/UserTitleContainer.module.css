@@ -4,16 +4,33 @@
     overflow: hidden;
     text-overflow: ellipsis;
 }
+.userTitleContainerMobile {
+    margin: 0;
+    text-align: center;
+}
 .userTitle {
     font-weight: 700;
     font-size: 32px;
     line-height: 38px;
     padding-bottom: 4px;
 }
+.userTitleMobile {
+    font-size: 17px;
+    line-height: 20px;
+    margin-bottom: 14px;
+    font-weight: 600;
+    -webkit-box-align: center;
+    align-items: center;
+}
 .verified {
     width: 20px;
     height: 20px;
     margin-left: 8px;
+}
+.verifiedMobile {
+    width: 14px;
+    height: 14px;
+    margin-left: 4px;
 }
 .userSubTitle {
     font-weight: 600;
@@ -34,6 +51,11 @@
     margin: 16px 0px 0px;
     font-size: 18px;
     line-height: 25px;
+}
+.userFollowContainerMobile {
+    width: 100%;
+    display: flex;
+    justify-content: center;
 }
 .followButton {
     position: absolute;
@@ -58,4 +80,8 @@
     cursor: pointer;
     background: linear-gradient(0deg ,rgba(0,0,0,0.06),rgba(0,0,0,0.06)),#fe2c55;
     border: none;
+}
+.followButtonMobile {
+    position: relative;
+    height: 44px;
 }

@@ -10,7 +10,19 @@
 .number:not(:last-child) {
     margin-right: 20px;
 }
+.numberMobile {
+    flex-direction: column;
+    align-items: center;
+    font-size: 17px;
+    line-height: normal;
+}
+.numberMobile:not(:last-child) {
+    margin-right: 0px;
+}
 .unit {
     font-weight: 400;
     margin-left: 6px;
+}
+.unitMobile {
+    font-size: 13px;
 }

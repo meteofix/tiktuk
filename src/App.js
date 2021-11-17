@@ -13,7 +13,7 @@ function App() {
         <MediaContext.Provider value={{isDesktopOrTablet, isMobile}}>
             <BrowserRouter>
                 <div className="App">
-                    <Link to={TRENDING_FEED_ROUTE}>TikTuk</Link>
+                    {/*<Link style={{height: '44px', }} to={TRENDING_FEED_ROUTE}>TikTuk</Link>*/}
                     <AppRouter/>
                 </div>
             </BrowserRouter>

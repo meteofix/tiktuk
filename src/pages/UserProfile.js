@@ -1,4 +1,4 @@
-import React, {useEffect, useState} from 'react';
+import React, {useContext, useEffect, useState} from 'react';
 import {useLocation} from "react-router-dom";
 import UserHeader from "../components/User/UserHeader";
 import UserMain from "../components/User/UserMain";
@@ -7,8 +7,11 @@ import { USER_INFO_URL} from "../utils/consts";
 import classes from './UserProfile.module.css'
 import l from '../UI/icons/Loader/LoaderWrapper.module.css'
 import Loader from "../UI/icons/Loader/Loader";
+import {MediaContext} from "../store/contexts/MediaContext";
+import LeftNav from "../UI/icons/leftNav";
 
 const UserProfile = () => {
+    const {isDesktopOrTablet, isMobile} = useContext(MediaContext);
     const location = useLocation();
     const user = location.pathname.slice(2);
     const [userInfo, setUserInfo] = useState([])
@@ -43,10 +46,11 @@ const UserProfile = () => {
 
 
     return (
-        <div className={classes.userLayout}>
-            <div className={classes.userLayoutContent}>
+        <div className={isMobile? classes.userLayout + ' ' + classes.userLayoutMobile : classes.userLayout}>
+            <div className={isMobile? classes.userLayoutContent + ' ' + classes.userLayoutContentMobile : classes.userLayoutContent}>
+
                 {isInfoLoading ?
-                    <div className={l.loaderWrapper + ' ' + l.loaderHeight60}>
+                    <div className={l.loaderWrapper + ' ' + l.loaderHeight80}>
                         <Loader/>
                     </div>
                     :

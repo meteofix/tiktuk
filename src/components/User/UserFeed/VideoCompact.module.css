@@ -3,10 +3,14 @@
     display: flex;
     justify-content: center;
     float: left;
-    width: 196px;
-    height: 260px;
-    margin-right: 2px;
-    margin-bottom: 2px;
+    border-right: 1px solid rgb(245, 245, 245);
+    border-bottom: 1px solid rgb(245, 245, 245);
+    /*background-color: rgba(22, 24, 35, 0.06);*/
+    width: 33%;
+    height: 25vw;
+}
+.videoFeedItemMobile {
+    height: 45vw;
 }
 .videoPlayer {
     width: 100%;
@@ -17,9 +21,9 @@
     position: absolute;
     width: 100%;
     bottom: 0px;
-    height: 100px;
+    height: 50px;
     background: linear-gradient(rgba(22, 24, 35, 0) 2.92%, rgba(22, 24, 35, 0.5) 98.99%);
-    padding: 67px 13px 17px;
+    padding: 13px 10px 17px;
     box-sizing: border-box;
 }
 .videoCardMask img {

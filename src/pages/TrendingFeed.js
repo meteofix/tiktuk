@@ -24,17 +24,20 @@ const TrendingFeed = () => {
     }, [setResponseData])
     return (
         <PlayerProvider>
+            <div className={isMobile? classes.feedWrapper + ' ' + classes.feedWrapperMobile : classes.feedWrapper}>
             {isLoading?
                 <div className={l.loaderWrapper + ' ' + l.loaderHeight80}>
                     <Loader/>
                 </div>
                 :
-                <div className={isMobile? classes.feedWrapper + ' ' + classes.feedWrapperMobile : classes.feedWrapper}>
+                <>
                     {responseData?.map((post, index) =>
                         <Post key={post.id} post={post} id={index}/>
                     )}
-                </div>
+                </>
             }
+            </div>
+
         </PlayerProvider>
     );
 };

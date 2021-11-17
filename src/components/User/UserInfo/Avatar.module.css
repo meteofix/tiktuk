@@ -15,3 +15,8 @@
     object-fit: cover;
     border-radius: 50%;
 }
+.tiktokAvatarMobile {
+    width: 96px;
+    height: 96px;
+    margin-bottom: 12px;
+}
