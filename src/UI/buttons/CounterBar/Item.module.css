@@ -23,6 +23,16 @@
 .barItemImg:hover {
     background: rgba(22, 24, 35, 0.1);
 }
+.barItemImgMobile {
+    color: white;
+    width: 40px;
+    height: 40px;
+    padding: 0;
+}
+.barItemImgMobile svg {
+    width: 40px;
+    height: 40px;
+}
 .barItemText {
     display: inline-block;
     text-align: center;
@@ -32,4 +42,8 @@
     font-weight: 600;
     font-size: 13px;
     line-height: 17px;
+}
+.barItemTextMobile {
+    color: white;
+    font-weight: 400;
 }

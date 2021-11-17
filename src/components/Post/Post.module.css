@@ -4,9 +4,36 @@
     padding: 20px 0;
     border-bottom: 0.5px solid rgba(22, 24, 35, 0.12);
 }
+.postWrapperMobile {
+    max-width: 100%;
+    height: 100vh;
+    background: black;
+    padding: 0;
+    left: 0;
+    border: none;
+}
+.avatarWrapper {
+
+}
+.avatarWrapperMobile {
+
+}
+.mobile {
+    position: absolute;
+    bottom: 60px;
+    z-index: 10;
+    width: 274px;
+    max-width: 274px;
+    overflow: hidden;
+    padding: 0px 10px 12px;
+}
 .postContent {
     position: relative;
     margin-left: 68px;
+}
+.postContentMobile {
+    margin-left: 0;
+    height: 100vh;
 }
 .followWrapper {
     position: absolute;

@@ -1,4 +1,4 @@
-import React, {useEffect, useState} from 'react';
+import React, {useContext, useEffect, useState} from 'react';
 import Post from "../components/Post/Post";
 import PlayerProvider from "../store/contexts/PlayerProvider";
 import requestData from "../utils/requestData";
@@ -6,10 +6,12 @@ import {TRENDING_FEED_URL} from "../utils/consts";
 import classes from './TrendingFeed.module.css'
 import l from '../UI/icons/Loader/LoaderWrapper.module.css'
 import Loader from "../UI/icons/Loader/Loader";
+import {MediaContext} from "../store/contexts/MediaContext";
 
 const TrendingFeed = () => {
     const [responseData, setResponseData] = useState([])
     const [isLoading, setIsLoading] = useState(false)
+    const {isDesktopOrTablet, isMobile} = useContext(MediaContext);
 
     useEffect(() => {
         setIsLoading(true);
@@ -27,7 +29,7 @@ const TrendingFeed = () => {
                     <Loader/>
                 </div>
                 :
-                <div className={classes.feedWrapper}>
+                <div className={isMobile? classes.feedWrapper + ' ' + classes.feedWrapperMobile : classes.feedWrapper}>
                     {responseData?.map((post, index) =>
                         <Post key={post.id} post={post} id={index}/>
                     )}

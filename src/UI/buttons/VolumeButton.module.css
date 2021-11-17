@@ -6,6 +6,10 @@
     height: 40px;
     cursor: pointer;
 }
+.volumeButtonMobile {
+    right: auto;
+    left: 25px;
+}
 .volumeButton svg {
     transform: translate(10px, 8px);
 }

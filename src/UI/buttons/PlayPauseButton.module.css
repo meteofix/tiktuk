@@ -5,7 +5,10 @@
     width: 40px;
     height: 40px;
     cursor: pointer;
-
+}
+.playPauseButtonMobile {
+    left: auto;
+    right: 25px;
 }
 .playPauseButton svg {
     transform: translate(10px, 10px);

@@ -10,15 +10,22 @@ import PlayPauseButton from "../../../UI/buttons/PlayPauseButton";
 import VolumeButton from "../../../UI/buttons/VolumeButton";
 import Item from "../../../UI/buttons/CounterBar/Item";
 import Loader from "../../../UI/icons/Loader/Loader";
+import {MediaContext} from "../../../store/contexts/MediaContext";
+import FollowButton from "../../../UI/buttons/FollowButton";
+import AuthorAvatar from "../Author/AuthorAvatar";
 
 
 const VideoContainer = ({post, id}) => {
+    const {isDesktopOrTablet, isMobile} = useContext(MediaContext);
+
     const [isVisible, currentElement] = useVisibility(200);
-    const [isVideoHover, setIsVideoHover] = useState(false);
+    const [isVideoHover, setIsVideoHover] = useState(!!isMobile);
     const [noVideo, setNoVideo] = useState(false);
     const [noImage, setNoImage] = useState(false);
     const [isBuffered, setIsBuffered] = useState(false);
     const {isMuted, playingId, dispatch} = useContext(PlayerContext)
+    const authorLink = '@' + post.authorMeta.name;
+
 
     const handlePlayPause = () => {
         if (playingId===id) dispatch(setPlayingId(''));
@@ -39,7 +46,9 @@ const VideoContainer = ({post, id}) => {
     };
 
     return (
-        <div className={classes.videoWrapper} ref={currentElement}>
+        <div className={isMobile? classes.videoWrapper + ' ' + classes.videoWrapperMobile : classes.videoWrapper}
+             ref={currentElement}
+        >
             <div
                 className={classes.video}
                 onMouseEnter={() => setIsVideoHover(true)}
@@ -75,20 +84,27 @@ const VideoContainer = ({post, id}) => {
                     <Loader small/>
                 </div>}
                 <span className={classes.styleLayerMask}></span>
-                <span style={!noVideo&&{display: 'none'}} className={classes.error}>Video downloading error</span>
-                <PlayPauseButton
-                    id={id}
-                    playingId={playingId}
-                    handlePlayPause={handlePlayPause}
-                    isHover={isVideoHover}
-                />
-                <VolumeButton
-                    handleMuted={handleMuted}
-                    isMuted={isMuted}
-                    isHover={isVideoHover}
-                />
+                <span style={noVideo? {display: 'flex'} : {display: 'none'}} className={classes.error}>Video downloading error</span>
+                <div className={isMobile? classes.playBar + ' ' + classes.playBarMobile : classes.playBar} >
+                    <PlayPauseButton
+                        id={id}
+                        playingId={playingId}
+                        handlePlayPause={handlePlayPause}
+                        isHover={isVideoHover}
+                    />
+                    <VolumeButton
+                        handleMuted={handleMuted}
+                        isMuted={isMuted}
+                        isHover={isVideoHover}
+                    />
+                </div>
             </div>
-            <div className={classes.counterBar}>
+            <div className={isMobile? classes.counterBar + ' ' + classes.counterBarMobile : classes.counterBar}>
+                {isMobile&&
+                <div className={classes.counterBarAvatar}>
+                    <AuthorAvatar avatar={post.authorMeta.avatar} authorLink={authorLink}/>
+                </div>
+                }
                 <Item type={'like'} count={post.diggCount}/>
                 <Item type={'comment'} count={post.commentCount}/>
                 <Item type={'share'} count={post.shareCount}/>

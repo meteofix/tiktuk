@@ -1,9 +1,15 @@
-import React from 'react';
+import React, {useContext} from 'react';
 import classes from "./PlayPauseButton.module.css";
+import {MediaContext} from "../../store/contexts/MediaContext";
 
 const PlayPauseButton = ({playingId, id, handlePlayPause, isHover}) => {
+    const {isDesktopOrTablet, isMobile} = useContext(MediaContext);
+
     return (
-        <div className={classes.playPauseButton} style={isHover?{display: 'block'}:{display: 'none'}} onClick={handlePlayPause} >
+        <div className={isMobile? classes.playPauseButton + ' ' + classes.playPauseButtonMobile : classes.playPauseButton}
+             style={isHover?{display: 'block'}:{display: 'none'}}
+             onClick={handlePlayPause}
+        >
             {playingId===id?
                 <svg  width="20" height="20" viewBox="0 0 48 48" fill="#fff"
                       xmlns="http://www.w3.org/2000/svg">

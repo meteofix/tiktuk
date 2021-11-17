@@ -1,8 +1,13 @@
 .musicInfo {
     margin-top: 4px;
+    margin-top: 8px;
     margin-bottom: 12px;
     max-width: 524px;
 }
+.musicInfoMobile {
+    display: flex;
+}
+
 .musicInfoText:hover {
     text-decoration: underline;cursor: pointer;
 }
@@ -15,4 +20,25 @@
     text-overflow: ellipsis;
     white-space: nowrap;
     overflow: hidden;
+}
+.musicInfoTextMobile {
+    color: white;
+    font-weight: 400;
+    padding-left:100%;
+    -webkit-animation: marquee 5s infinite linear;
+    animation: marquee 5s infinite linear;
+}
+.play {
+    width:100%;
+    white-space:nowrap;
+    overflow:hidden;
+    margin-left: 10px;
+}
+@-webkit-keyframes marquee {
+    0%{-webkit-transform: translate(0, 0);}
+    100%{-webkit-transform: translate(-100%, 0);}
+}
+@keyframes marquee{
+    0%{transform: translate(0, 0);}
+    100%{transform: translate(-100%, 0)}
 }

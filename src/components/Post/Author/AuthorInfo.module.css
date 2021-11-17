@@ -3,6 +3,15 @@
     flex-flow: row wrap;
     margin-right: 150px;
 }
+.authorInfoMobile {
+    /*position: absolute;*/
+    /*z-index: 10;*/
+    margin-right: 0px;
+
+}
+.authorInfoMobile a {
+    color: white;
+}
 .authorId {
     text-decoration: none;
     margin-right: 4px;

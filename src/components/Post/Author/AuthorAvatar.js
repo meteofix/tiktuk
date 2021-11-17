@@ -1,15 +1,26 @@
-import React from 'react';
+import React, {useContext} from 'react';
 import {Link} from "react-router-dom";
 import classes from "./AuthorAvatar.module.css";
+import {MediaContext} from "../../../store/contexts/MediaContext";
+import followPlus from '../../../UI/icons/followPlus.svg'
 
-const AuthorAvatar = ({authorLink, avatar, setIsHover}) => {
+const AuthorAvatar = ({authorLink, avatar, setIsHover = () => false}) => {
+    const {isDesktopOrTablet, isMobile} = useContext(MediaContext);
+
     return (
-        <Link to={authorLink} className={classes.postAvatar}>
+        <Link to={authorLink}
+              className={isMobile? classes.postAvatar + ' ' + classes.postAvatarMobile : classes.postAvatar}
+        >
                 <span className={classes.tiktokAvatar}
                       onMouseEnter={() => setIsHover(true)}
                       onMouseLeave={() => setIsHover(false)}
                 >
+                    {isMobile &&
                     <img alt='Profile image' title='Profile image' src={avatar}/>
+                    }
+                    <div className={classes.plusIcon}>
+                        <img alt={'Follow'} src={followPlus}/>
+                    </div>
                 </span>
         </Link>
     );

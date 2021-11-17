@@ -7,10 +7,13 @@
 .loader {
     position: relative;
     left: calc(var(--circle-diameter) * -1);
+    z-index: 20;
 }
 
 .loaderSmall {
     left: calc(var(--circle-diameter-small) * -1);
+    z-index: 20;
+
 }
 
 .loader:before,
