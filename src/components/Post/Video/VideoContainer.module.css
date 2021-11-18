@@ -46,6 +46,7 @@
 .playBarMobile {
     position: absolute;
     left: 50%;
+    bottom: 40px
 }
 .counterBar {
     position: absolute;
@@ -57,7 +58,7 @@
 }
 .counterBarMobile {
     right: 0px;
-    bottom: 160px;
+    bottom: 200px;
     z-index: 10;
     padding: 0 10px 30px;
 }
