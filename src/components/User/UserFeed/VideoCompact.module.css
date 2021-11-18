@@ -7,10 +7,10 @@
     border-bottom: 1px solid rgb(245, 245, 245);
     /*background-color: rgba(22, 24, 35, 0.06);*/
     width: 33%;
-    height: 25vw;
+    min-height: 22vw;
 }
 .videoFeedItemMobile {
-    height: 45vw;
+    min-height: 45vw;
 }
 .videoPlayer {
     width: 100%;
@@ -20,7 +20,7 @@
 .videoCardMask {
     position: absolute;
     width: 100%;
-    bottom: 0px;
+    bottom: 3px;
     height: 50px;
     background: linear-gradient(rgba(22, 24, 35, 0) 2.92%, rgba(22, 24, 35, 0.5) 98.99%);
     padding: 13px 10px 17px;

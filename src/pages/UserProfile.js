@@ -54,7 +54,7 @@ const UserProfile = () => {
                         <Loader/>
                     </div>
                     :
-                    !userInfo || userInfo.length === 0 || !userInfo.user.uniqueId ?
+                    !userInfo || userInfo.length === 0  ?
                         <div className={l.loaderWrapper + ' ' + l.loaderHeight80}>
                             <Loader/>
                         </div>
