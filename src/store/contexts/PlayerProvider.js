@@ -1,4 +1,4 @@
-import React, { createContext, useReducer } from 'react';
+import React, { createContext, useMemo, useReducer } from 'react';
 import { playerReducer } from '../reducers/playerReducer';
 
 export const PlayerContext = createContext({
@@ -11,12 +11,12 @@ export const PlayerContext = createContext({
 const PlayerProvider = ({ children }) => {
   const initialState = { id: 0, muted: true };
   const [playing, dispatch] = useReducer(playerReducer, initialState);
-
-  return (
-    <PlayerContext.Provider value={{ isMuted: playing.muted, playingId: playing.id, dispatch }}>
-      {children}
-    </PlayerContext.Provider>
+  const PlayerContextValue = useMemo(
+    () => ({ isMuted: playing.muted, playingId: playing.id, dispatch }),
+    [playing.muted, playing.id]
   );
+
+  return <PlayerContext.Provider value={PlayerContextValue}>{children}</PlayerContext.Provider>;
 };
 
 export default PlayerProvider;

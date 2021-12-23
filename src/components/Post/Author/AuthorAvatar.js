@@ -22,7 +22,7 @@ const AuthorAvatar = ({ authorLink, avatar, setIsHover = () => false }) => {
             <img alt="Follow" src={followPlus} />
           </div>
         )}
-        <img alt="Profile image" title="Profile image" src={avatar} />
+        <img alt="Profile img" title="Profile image" src={avatar} />
       </span>
     </Link>
   );

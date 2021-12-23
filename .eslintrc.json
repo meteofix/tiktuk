@@ -33,11 +33,12 @@
             "unnamedComponents": "function-expression"
         }],
         "react/prop-types": 0,
+        "react/jsx-no-useless-fragment": ["error", { "allowExpressions": true }],
         "import/prefer-default-export": "off",
         "more/no-void-map": 2,
         "more/no-c-like-loops": 2,
         "more/prefer-includes": 2,
-        "more/no-then": 2,
+        "more/no-then": 0,
         "more/no-window": [2 , { "exclude": ["innerHeight", "addEventListener", "removeEventListener"]  }],
         "more/no-numeric-endings-for-variables": 2,
         "more/no-filter-instead-of-find": 2,
@@ -54,6 +55,9 @@
                     "pascalCase": true
                 }
             }
-        ]
+        ],
+        "jsx-a11y/click-events-have-key-events": 0,
+        "jsx-a11y/no-noninteractive-element-interactions": 0,
+        "jsx-a11y/no-static-element-interactions": 0
     }
 }

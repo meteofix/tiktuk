@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useMemo } from 'react';
 import './App.css';
 import { BrowserRouter } from 'react-router-dom';
 import { useMediaQuery } from 'react-responsive';
@@ -8,9 +8,10 @@ import { MediaContext } from './store/contexts/MediaContext';
 const App = () => {
   const isDesktopOrTablet = useMediaQuery({ minWidth: 769 });
   const isMobile = useMediaQuery({ maxWidth: 768 });
+  const MediaContextValue = useMemo(() => ({ isDesktopOrTablet, isMobile }), [isDesktopOrTablet, isMobile]);
 
   return (
-    <MediaContext.Provider value={{ isDesktopOrTablet, isMobile }}>
+    <MediaContext.Provider value={MediaContextValue}>
       <BrowserRouter>
         <div className="App">
           <AppRouter />

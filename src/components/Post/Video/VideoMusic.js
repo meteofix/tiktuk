@@ -11,6 +11,7 @@ const VideoMusic = ({ musicMeta }) => {
       <MusicIcon />
       <div className={classes.play}>
         <h4>
+          {/* eslint-disable-next-line jsx-a11y/anchor-is-valid */}
           <a>
             <div
               className={isMobile ? `${classes.musicInfoText} ${classes.musicInfoTextMobile}` : classes.musicInfoText}
