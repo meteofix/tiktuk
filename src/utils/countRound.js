@@ -1,14 +1,10 @@
-const CountRound = ({count}) => {
-    function round(num) {
-        return Math.abs(Number(num)) >= 1.0e+9
-            ? Math.round(Math.abs(Number(num*10)) / 1.0e+9 )/10 + "B"
-            : Math.abs(Number(num)) >= 1.0e+6
-                ? Math.round(Math.abs(Number(num*10)) / 1.0e+6 )/10 + "M"
-                : Math.abs(Number(num)) >= 1.0e+3
-                    ? Math.round(Math.abs(Number(num*10)) / 1.0e+3 )/10 + "K"
-                    : Math.abs(Number(num));
-    }
-    return round(count);
-};
+const CountRound = ({ count }) =>
+  Math.abs(Number(count)) >= 1e9
+    ? `${Math.round(Math.abs(Number(count * 10)) / 1e9) / 10}B`
+    : Math.abs(Number(count)) >= 1e6
+    ? `${Math.round(Math.abs(Number(count * 10)) / 1e6) / 10}M`
+    : Math.abs(Number(count)) >= 1e3
+    ? `${Math.round(Math.abs(Number(count * 10)) / 1e3) / 10}K`
+    : Math.abs(Number(count));
 
 export default CountRound;

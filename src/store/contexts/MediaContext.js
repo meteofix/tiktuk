@@ -1,8 +1,6 @@
-import {createContext} from "react";
-import {useMediaQuery} from "react-responsive";
+import { createContext } from "react";
 
 export const MediaContext = createContext({
-    isDesktopOrTablet: false,
-    isMobile: false
-})
-
+  isDesktopOrTablet: false,
+  isMobile: false,
+});

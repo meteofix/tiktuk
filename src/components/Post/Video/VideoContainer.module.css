@@ -1,6 +1,4 @@
 .videoWrapper{
-    /*background-color: white;*/
-
     position: relative;
     scroll-snap-align: start;
     width: calc(0.56 * (450px + ((100vw - 768px) / 1152) * 100));
